@@ -1,0 +1,218 @@
+.root-pane {
+    -fx-background-color: #f0f4f8;
+    -fx-padding: 20px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.game-pane {
+    -fx-font-family: "Verdana", sans-serif;
+}
+
+.title-text {
+    -fx-font-size: 28px;
+    -fx-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.game-title-text {
+    -fx-font-size: 36px;
+    -fx-fill: #16a085;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 2, 2);
+}
+
+.label-text {
+    -fx-font-size: 16px;
+    -fx-fill: #34495e;
+}
+
+.label-text-small {
+    -fx-font-size: 14px;
+    -fx-fill: #7f8c8d; /* Asbestos */
+}
+
+.section-text {
+    -fx-font-size: 14px;
+    -fx-fill: #7f8c8d;
+    -fx-font-style: italic;
+}
+
+.hint-text {
+    -fx-font-size: 12px;
+    -fx-fill: #95a5a6;
+    -fx-font-style: italic;
+}
+
+.menu-section {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 10px;
+}
+
+.difficulty-section {
+    -fx-padding: 10px 20px;
+}
+
+.button-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+    -fx-background-radius: 25;
+}
+.button-primary:hover {
+    -fx-background-color: #2980b9; /* Belize hole */
+}
+
+.button-secondary {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-background-radius: 25;
+}
+.button-secondary:hover {
+    -fx-background-color: #7f8c8d; /* Asbestos */
+}
+
+.button-play {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-padding: 12px;
+    -fx-background-radius: 25;
+}
+.button-play:hover {
+    -fx-background-color: #27ae60; /* Nephritis */
+}
+
+.button-guess {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5;
+}
+.button-guess:hover {
+    -fx-background-color: #d35400; /* Pumpkin */
+}
+
+.textfield-custom {
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-background-radius: 5;
+}
+
+.radio-button-custom {
+    -fx-font-size: 14px;
+}
+
+.radio-button-custom .radio {
+    -fx-border-width: 2px;
+    -fx-border-color: #3498db;
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+.radio-button-custom:selected .radio .dot {
+    -fx-background-color: #3498db;
+    -fx-background-insets: 0;
+}
+.radio-button-custom .text {
+    -fx-font-size: 15px;
+    -fx-fill: #34495e;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c; /* Alizarin crimson */
+    -fx-font-size: 14px;
+}
+
+.message-label {
+    -fx-text-fill: #27ae60; /* Nephritis */
+    -fx-font-size: 14px;
+}
+
+.feedback-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #e67e22;
+}
+
+.animated-guess {
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-fill: #3498db;
+    -fx-opacity: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 15, 0.5, 3, 3);
+}
+
+.list-view-custom {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.list-view-custom .list-cell {
+    -fx-padding: 5px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #34495e;
+}
+.list-view-custom .list-cell:odd {
+    -fx-background-color: #ecf0f1;
+}
+
+.score-text {
+    -fx-font-size: 20px;
+    -fx-fill: #2980b9;
+    -fx-font-weight: bold;
+}
+
+.difficulty-text {
+    -fx-font-size: 20px;
+    -fx-fill: #8e44ad;
+    -fx-font-weight: bold;
+}
+
+.leaderboard-tabs {
+    -fx-padding: 0;
+}
+
+.leaderboard-tabs .tab-header-area {
+    -fx-padding: 0;
+}
+
+.leaderboard-tabs .tab {
+    -fx-padding: 8px 15px;
+    -fx-background-color: #ecf0f1;
+}
+
+.leaderboard-tabs .tab:selected {
+    -fx-background-color: #3498db;
+}
+
+.leaderboard-tabs .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.tab-content {
+    -fx-padding: 20px;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #ecf0f1;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}

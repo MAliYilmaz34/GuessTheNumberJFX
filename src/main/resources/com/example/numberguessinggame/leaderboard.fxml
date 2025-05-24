@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.example.numberguessinggame.LeaderboardController"
+         styleClass="root-pane">
+    
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="20" bottom="20" left="30" right="30"/>
+        </padding>
+
+        <Text text="Number Guesser" styleClass="game-title-text"/>
+        <Text text="Leaderboard" styleClass="title-text"/>
+        
+        <VBox alignment="CENTER" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+            <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" styleClass="leaderboard-tabs" VBox.vgrow="ALWAYS">
+                <tabs>
+                    <Tab text="Overall">
+                        <VBox alignment="CENTER" spacing="10" styleClass="tab-content">
+                            <Text text="Best Scores Across All Difficulties" styleClass="section-text"/>
+                            <TableView fx:id="overallTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="overallRankColumn" text="Rank" minWidth="50" maxWidth="50" resizable="false"/>
+                                    <TableColumn fx:id="overallUsernameColumn" text="Player" minWidth="150"/>
+                                    <TableColumn fx:id="overallScoreColumn" text="Score" minWidth="80" maxWidth="80" resizable="false"/>
+                                </columns>
+                                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+                    <Tab text="Easy Mode">
+                        <VBox alignment="CENTER" spacing="10" styleClass="tab-content">
+                            <Text text="Range: 1-10 | Base: 100 pts | -10 per guess" styleClass="section-text"/>
+                            <TableView fx:id="easyTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="easyRankColumn" text="Rank" minWidth="50" maxWidth="50" resizable="false"/>
+                                    <TableColumn fx:id="easyUsernameColumn" text="Player" minWidth="150"/>
+                                    <TableColumn fx:id="easyScoreColumn" text="Score" minWidth="80" maxWidth="80" resizable="false"/>
+                                </columns>
+                                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+                    <Tab text="Medium Mode">
+                        <VBox alignment="CENTER" spacing="10" styleClass="tab-content">
+                            <Text text="Range: 1-100 | Base: 500 pts | -15 per guess" styleClass="section-text"/>
+                            <TableView fx:id="mediumTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="mediumRankColumn" text="Rank" minWidth="50" maxWidth="50" resizable="false"/>
+                                    <TableColumn fx:id="mediumUsernameColumn" text="Player" minWidth="150"/>
+                                    <TableColumn fx:id="mediumScoreColumn" text="Score" minWidth="80" maxWidth="80" resizable="false"/>
+                                </columns>
+                                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+                    <Tab text="Hard Mode">
+                        <VBox alignment="CENTER" spacing="10" styleClass="tab-content">
+                            <Text text="Range: 1-1000 | Base: 1000 pts | -20 per guess" styleClass="section-text"/>
+                            <TableView fx:id="hardTable" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="hardRankColumn" text="Rank" minWidth="50" maxWidth="50" resizable="false"/>
+                                    <TableColumn fx:id="hardUsernameColumn" text="Player" minWidth="150"/>
+                                    <TableColumn fx:id="hardScoreColumn" text="Score" minWidth="80" maxWidth="80" resizable="false"/>
+                                </columns>
+                                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                            </TableView>
+                        </VBox>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </VBox>
+        
+        <Button text="Back to Menu" onAction="#handleBackButtonAction" styleClass="button-secondary" prefWidth="120"/>
+    </VBox>
+</StackPane> 

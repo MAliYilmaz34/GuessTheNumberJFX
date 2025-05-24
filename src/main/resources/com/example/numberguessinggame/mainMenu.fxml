@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="com.example.numberguessinggame.MainMenuController"
+         styleClass="root-pane">
+    
+    <VBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="20" bottom="20" left="30" right="30"/>
+        </padding>
+
+        <Text text="Number Guesser" styleClass="game-title-text"/>
+        <Text fx:id="welcomeText" text="Welcome!" styleClass="title-text"/>
+        
+        <VBox alignment="CENTER" spacing="15" styleClass="menu-section" VBox.vgrow="ALWAYS" maxWidth="Infinity">
+            <padding>
+                <Insets top="20" bottom="20" left="30" right="30"/>
+            </padding>
+            
+            <Text text="Select Difficulty:" styleClass="label-text"/>
+            <VBox alignment="CENTER" spacing="15">
+                <RadioButton fx:id="easyRadio" text="Easy (1-10) | Base: 100 pts | -10 per guess" styleClass="radio-button-custom" wrapText="true"/>
+                <RadioButton fx:id="mediumRadio" text="Medium (1-100) | Base: 500 pts | -15 per guess" styleClass="radio-button-custom" wrapText="true"/>
+                <RadioButton fx:id="hardRadio" text="Hard (1-1000) | Base: 1000 pts | -20 per guess" styleClass="radio-button-custom" wrapText="true"/>
+            </VBox>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10" maxWidth="300">
+            <Button text="Play Game" onAction="#handlePlayButtonAction" styleClass="button-play" maxWidth="Infinity"/>
+            <Button text="View Leaderboard" onAction="#handleLeaderboardButtonAction" styleClass="button-primary" maxWidth="Infinity"/>
+            <Button text="Logout" onAction="#handleLogoutButtonAction" styleClass="button-secondary" maxWidth="Infinity"/>
+        </VBox>
+    </VBox>
+</StackPane>

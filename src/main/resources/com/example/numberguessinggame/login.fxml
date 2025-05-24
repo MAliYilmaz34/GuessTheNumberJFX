@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.numberguessinggame.LoginController"
+      alignment="CENTER" spacing="20" styleClass="root-pane">
+    <Text text="Number Guesser Login" styleClass="title-text"/>
+    <TextField fx:id="usernameField" promptText="Username" maxWidth="200"/>
+    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200"/>
+    <Label fx:id="errorLabel" styleClass="error-label"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Login" onAction="#handleLoginButtonAction" styleClass="button-primary"/>
+        <Button text="Register" onAction="#handleRegisterLinkAction" styleClass="button-secondary"/>
+    </HBox>
+</VBox>
